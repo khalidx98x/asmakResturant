@@ -20,8 +20,8 @@ class CreateFloorsTable extends Migration
             $table->unsignedBigInteger('floor_manager_id')->nullable();
 
             $table->foreign('floor_manager_id')->references('id')->on('floor_managers');
-
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -11,7 +11,7 @@ class Table extends Model
 
     public function floor()
     {
-        return $this->belongsTo('App\Floor');
+        return $this->belongsTo(Floor::class);
     }
 
     

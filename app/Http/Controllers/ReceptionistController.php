@@ -142,7 +142,6 @@ class ReceptionistController extends Controller
 
         $receptionists->delete();
 
-
         alert()->success('تم الحذف بنجاح', 'Success');
         return redirect()->route('admin.receptionists.index');
     }

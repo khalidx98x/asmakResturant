@@ -12,6 +12,6 @@ class FloorManager extends Model
  
     public function floor()
     {
-        return $this->hasOne('App\Floor');
+        return $this->hasOne(Floor::class);
     }
 }

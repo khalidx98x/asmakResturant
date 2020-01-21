@@ -11,12 +11,12 @@ class FloorsTables extends Model
 
     public function floor()
     {
-        return $this->hasMany('App\Floor');
+        return $this->hasMany(Floor::class);
     }
 
     public function table()
     {
-        return $this->hasMany('App\table');
+        return $this->hasMany(Floor::class);
     }
 
 

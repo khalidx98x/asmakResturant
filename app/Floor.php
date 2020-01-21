@@ -3,13 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use SoftDeletes;
-
+use Illuminate\Database\Eloquent\SoftDeletes;
 // use \Illuminate\Database\Eloquent\SoftDeletes;
 // use \Askedio\SoftCascade\Traits\SoftCascadeTrait;
 
 class Floor extends Model
 {
+    use SoftDeletes;
     protected $fillable = ['name','status','floor_manager_id'];
 
     // protected $softCascade = ['tables'];
@@ -20,12 +20,12 @@ class Floor extends Model
  
     public function table()
     {
-        return $this->hasMany('App\Table');
+        return $this->hasMany(Table::class);
     }
 
     public function floorManager()
     {
-        return $this->belongsTo('App\FloorManager');
+        return $this->belongsTo(FloorManager::class);
     }
 
 
